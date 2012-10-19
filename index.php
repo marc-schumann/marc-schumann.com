@@ -5,7 +5,8 @@
 	</head>
 	<body>
 		<div>
-			Das ist eine Testseite von <?php echo $_SERVER['HTTP_HOST']?>
+			Das ist eine Testseite von <?php echo $_SERVER['HTTP_HOST']?><br />
+			Ich habe jetzt was geändert.
 		</div>
 	</body>
 </html>
