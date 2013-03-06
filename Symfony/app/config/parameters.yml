@@ -1,0 +1,14 @@
+parameters:
+    database_driver: pdo_mysql
+    database_host: localhost
+    database_port: '3306'
+    database_name: marc-schumann
+    database_user: symfony
+    database_password: symfony
+    mailer_transport: smtp
+    mailer_host: localhost
+    mailer_user: null
+    mailer_password: null
+    locale: en
+    secret: 2473d4aab5e1106ca0236a03830da9c94
+    database_path: null

@@ -1,0 +1,3 @@
+_start:
+    resource: @MsWebsiteBundle/Controller/StartController.php
+    type: annotation

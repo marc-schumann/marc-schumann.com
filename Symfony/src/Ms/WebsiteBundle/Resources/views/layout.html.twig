@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        	{% if title is defined %}
+        		{{ title }}
+        	{% else %}
+        		{% block title %} Marc Schumann stellt sich vor ... {% endblock %}
+        	{% endif %}
+        </title>
+    </head>
+    <body>
+    	<div class="contentWrapper">
+    		{% block content_header %}
+    			
+    		{% endblock %}
+    		
+    		{% block content_header_navi %}
+    			
+    		{% endblock %}
+		        
+	        <div class="contentContainer">
+	        	{% block content %}
+	        		kann ich hier was reinschreiben?
+	        	{% endblock %}
+	        </div>
+		</div>
+    </body>
+</html>
