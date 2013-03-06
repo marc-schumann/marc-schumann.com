@@ -257,7 +257,7 @@ class appDevDebugProjectContainer extends Container
         $b = new \Doctrine\DBAL\Configuration();
         $b->setSQLLogger($a);
 
-        return $this->services['doctrine.dbal.default_connection'] = $this->get('doctrine.dbal.connection_factory')->createConnection(array('dbname' => 'marc-schumann', 'host' => 'localhost', 'port' => '3306', 'user' => 'root', 'password' => NULL, 'charset' => 'UTF8', 'driver' => 'pdo_mysql', 'driverOptions' => array()), $b, new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this), array());
+        return $this->services['doctrine.dbal.default_connection'] = $this->get('doctrine.dbal.connection_factory')->createConnection(array('dbname' => 'marc-schumann', 'host' => 'localhost', 'port' => '3306', 'user' => 'symfony', 'password' => 'symfony', 'charset' => 'UTF8', 'driver' => 'pdo_mysql', 'driverOptions' => array()), $b, new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this), array());
     }
 
     /**
@@ -266,11 +266,11 @@ class appDevDebugProjectContainer extends Container
      * This service is shared.
      * This method always returns the same instance of the service.
      *
-     * @return EntityManager50880acce1f9d_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager A EntityManager50880acce1f9d_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager instance.
+     * @return EntityManager5089420c02287_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager A EntityManager5089420c02287_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager instance.
      */
     protected function getDoctrine_Orm_DefaultEntityManagerService()
     {
-        require_once 'D:/XAMPP/htdocs/dev-ms.com/Symfony/app/cache/dev/jms_diextra/doctrine/EntityManager_50880acce1f9d.php';
+        require_once 'D:/XAMPP/htdocs/dev-ms.com/Symfony/app/cache/dev/jms_diextra/doctrine/EntityManager_5089420c02287.php';
 
         $a = new \Doctrine\Common\Cache\ArrayCache();
         $a->setNamespace('sf2orm_default_c18a05ca82cb884496f70c2bbbced685');
@@ -297,7 +297,7 @@ class appDevDebugProjectContainer extends Container
         $e = call_user_func(array('Doctrine\\ORM\\EntityManager', 'create'), $this->get('doctrine.dbal.default_connection'), $d);
         $this->get('doctrine.orm.default_manager_configurator')->configure($e);
 
-        return $this->services['doctrine.orm.default_entity_manager'] = new \EntityManager50880acce1f9d_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager($e, $this);
+        return $this->services['doctrine.orm.default_entity_manager'] = new \EntityManager5089420c02287_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager($e, $this);
     }
 
     /**
@@ -412,7 +412,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getForm_CsrfProviderService()
     {
-        return $this->services['form.csrf_provider'] = new \Symfony\Component\Form\Extension\Csrf\CsrfProvider\SessionCsrfProvider($this->get('session'), '2b5d75bead129abca62d5fc58a4cdb86');
+        return $this->services['form.csrf_provider'] = new \Symfony\Component\Form\Extension\Csrf\CsrfProvider\SessionCsrfProvider($this->get('session'), '2473d4aab5e1106ca0236a03830da9c94');
     }
 
     /**
@@ -2576,7 +2576,7 @@ class appDevDebugProjectContainer extends Container
     /**
      * Gets the doctrine.orm.entity_manager service alias.
      *
-     * @return EntityManager50880acce1f9d_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager An instance of the doctrine.orm.default_entity_manager service
+     * @return EntityManager5089420c02287_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager An instance of the doctrine.orm.default_entity_manager service
      */
     protected function getDoctrine_Orm_EntityManagerService()
     {
@@ -2936,7 +2936,7 @@ class appDevDebugProjectContainer extends Container
                 'JMSAopBundle' => 'JMS\\AopBundle\\JMSAopBundle',
                 'JMSDiExtraBundle' => 'JMS\\DiExtraBundle\\JMSDiExtraBundle',
                 'JMSSecurityExtraBundle' => 'JMS\\SecurityExtraBundle\\JMSSecurityExtraBundle',
-                'MsComWebsiteBundle' => 'MsCom\\WebsiteBundle\\MsComWebsiteBundle',
+                'MsWebsiteBundle' => 'Ms\\WebsiteBundle\\MsWebsiteBundle',
                 'AcmeDemoBundle' => 'Acme\\DemoBundle\\AcmeDemoBundle',
                 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle',
                 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle',
@@ -2948,14 +2948,14 @@ class appDevDebugProjectContainer extends Container
             'database_host' => 'localhost',
             'database_port' => '3306',
             'database_name' => 'marc-schumann',
-            'database_user' => 'root',
-            'database_password' => NULL,
+            'database_user' => 'symfony',
+            'database_password' => 'symfony',
             'mailer_transport' => 'smtp',
             'mailer_host' => 'localhost',
             'mailer_user' => NULL,
             'mailer_password' => NULL,
             'locale' => 'en',
-            'secret' => '2b5d75bead129abca62d5fc58a4cdb86',
+            'secret' => '2473d4aab5e1106ca0236a03830da9c94',
             'database_path' => NULL,
             'controller_resolver.class' => 'Symfony\\Bundle\\FrameworkBundle\\Controller\\ControllerResolver',
             'controller_name_converter.class' => 'Symfony\\Bundle\\FrameworkBundle\\Controller\\ControllerNameParser',
@@ -2998,7 +2998,7 @@ class appDevDebugProjectContainer extends Container
             'debug.stopwatch.class' => 'Symfony\\Component\\HttpKernel\\Debug\\Stopwatch',
             'debug.container.dump' => 'D:/XAMPP/htdocs/dev-ms.com/Symfony/app/cache/dev/appDevDebugProjectContainer.xml',
             'debug.controller_resolver.class' => 'Symfony\\Bundle\\FrameworkBundle\\Controller\\TraceableControllerResolver',
-            'kernel.secret' => '2b5d75bead129abca62d5fc58a4cdb86',
+            'kernel.secret' => '2473d4aab5e1106ca0236a03830da9c94',
             'kernel.trust_proxy_headers' => false,
             'kernel.default_locale' => 'en',
             'session.class' => 'Symfony\\Component\\HttpFoundation\\Session\\Session',
@@ -3400,8 +3400,8 @@ class appDevDebugProjectContainer extends Container
             ),
             'jms_di_extra.cache_dir' => 'D:/XAMPP/htdocs/dev-ms.com/Symfony/app/cache/dev/jms_diextra',
             'jms_di_extra.doctrine_integration' => true,
-            'jms_di_extra.doctrine_integration.entity_manager.file' => 'D:/XAMPP/htdocs/dev-ms.com/Symfony/app/cache/dev/jms_diextra/doctrine/EntityManager_50880acce1f9d.php',
-            'jms_di_extra.doctrine_integration.entity_manager.class' => 'EntityManager50880acce1f9d_546a8d27f194334ee012bfe64f629947b07e4919\\__CG__\\Doctrine\\ORM\\EntityManager',
+            'jms_di_extra.doctrine_integration.entity_manager.file' => 'D:/XAMPP/htdocs/dev-ms.com/Symfony/app/cache/dev/jms_diextra/doctrine/EntityManager_5089420c02287.php',
+            'jms_di_extra.doctrine_integration.entity_manager.class' => 'EntityManager5089420c02287_546a8d27f194334ee012bfe64f629947b07e4919\\__CG__\\Doctrine\\ORM\\EntityManager',
             'security.secured_services' => array(
 
             ),

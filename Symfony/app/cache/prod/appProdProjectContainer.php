@@ -59,11 +59,11 @@ class appProdProjectContainer extends Container
     }
     protected function getDoctrine_Dbal_DefaultConnectionService()
     {
-        return $this->services['doctrine.dbal.default_connection'] = $this->get('doctrine.dbal.connection_factory')->createConnection(array('dbname' => 'marc-schumann', 'host' => 'localhost', 'port' => '3306', 'user' => 'root', 'password' => NULL, 'charset' => 'UTF8', 'driver' => 'pdo_mysql', 'driverOptions' => array()), new \Doctrine\DBAL\Configuration(), new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this), array());
+        return $this->services['doctrine.dbal.default_connection'] = $this->get('doctrine.dbal.connection_factory')->createConnection(array('dbname' => 'symfony', 'host' => 'localhost', 'port' => NULL, 'user' => 'root', 'password' => NULL, 'charset' => 'UTF8', 'driver' => 'pdo_mysql', 'driverOptions' => array()), new \Doctrine\DBAL\Configuration(), new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this), array());
     }
     protected function getDoctrine_Orm_DefaultEntityManagerService()
     {
-        require_once 'D:/XAMPP/htdocs/dev-ms.com/Symfony/app/cache/prod/jms_diextra/doctrine/EntityManager_5087b5d4400b6.php';
+        require_once 'D:/XAMPP/htdocs/dev-ms.com/Symfony/app/cache/prod/jms_diextra/doctrine/EntityManager_508936b80eebb.php';
         $a = new \Doctrine\Common\Cache\ArrayCache();
         $a->setNamespace('sf2orm_default_4120004fcd23b050cefebdf429eb9610');
         $b = new \Doctrine\Common\Cache\ArrayCache();
@@ -84,7 +84,7 @@ class appProdProjectContainer extends Container
         $d->setNamingStrategy(new \Doctrine\ORM\Mapping\DefaultNamingStrategy());
         $e = call_user_func(array('Doctrine\\ORM\\EntityManager', 'create'), $this->get('doctrine.dbal.default_connection'), $d);
         $this->get('doctrine.orm.default_manager_configurator')->configure($e);
-        return $this->services['doctrine.orm.default_entity_manager'] = new \EntityManager5087b5d4400b6_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager($e, $this);
+        return $this->services['doctrine.orm.default_entity_manager'] = new \EntityManager508936b80eebb_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager($e, $this);
     }
     protected function getDoctrine_Orm_DefaultManagerConfiguratorService()
     {
@@ -127,7 +127,7 @@ class appProdProjectContainer extends Container
     }
     protected function getForm_CsrfProviderService()
     {
-        return $this->services['form.csrf_provider'] = new \Symfony\Component\Form\Extension\Csrf\CsrfProvider\SessionCsrfProvider($this->get('session'), '2b5d75bead129abca62d5fc58a4cdb86');
+        return $this->services['form.csrf_provider'] = new \Symfony\Component\Form\Extension\Csrf\CsrfProvider\SessionCsrfProvider($this->get('session'), 'ThisTokenIsNotSoSecretChangeIt');
     }
     protected function getForm_FactoryService()
     {
@@ -912,8 +912,8 @@ class appProdProjectContainer extends Container
             'kernel.container_class' => 'appProdProjectContainer',
             'database_driver' => 'pdo_mysql',
             'database_host' => 'localhost',
-            'database_port' => '3306',
-            'database_name' => 'marc-schumann',
+            'database_port' => NULL,
+            'database_name' => 'symfony',
             'database_user' => 'root',
             'database_password' => NULL,
             'mailer_transport' => 'smtp',
@@ -921,8 +921,7 @@ class appProdProjectContainer extends Container
             'mailer_user' => NULL,
             'mailer_password' => NULL,
             'locale' => 'en',
-            'secret' => '2b5d75bead129abca62d5fc58a4cdb86',
-            'database_path' => NULL,
+            'secret' => 'ThisTokenIsNotSoSecretChangeIt',
             'controller_resolver.class' => 'Symfony\\Bundle\\FrameworkBundle\\Controller\\ControllerResolver',
             'controller_name_converter.class' => 'Symfony\\Bundle\\FrameworkBundle\\Controller\\ControllerNameParser',
             'response_listener.class' => 'Symfony\\Component\\HttpKernel\\EventListener\\ResponseListener',
@@ -960,7 +959,7 @@ class appProdProjectContainer extends Container
             'translation.loader.class' => 'Symfony\\Bundle\\FrameworkBundle\\Translation\\TranslationLoader',
             'translation.extractor.class' => 'Symfony\\Component\\Translation\\Extractor\\ChainExtractor',
             'translation.writer.class' => 'Symfony\\Component\\Translation\\Writer\\TranslationWriter',
-            'kernel.secret' => '2b5d75bead129abca62d5fc58a4cdb86',
+            'kernel.secret' => 'ThisTokenIsNotSoSecretChangeIt',
             'kernel.trust_proxy_headers' => false,
             'kernel.default_locale' => 'en',
             'session.class' => 'Symfony\\Component\\HttpFoundation\\Session\\Session',
@@ -1327,8 +1326,8 @@ class appProdProjectContainer extends Container
             ),
             'jms_di_extra.cache_dir' => 'D:/XAMPP/htdocs/dev-ms.com/Symfony/app/cache/prod/jms_diextra',
             'jms_di_extra.doctrine_integration' => true,
-            'jms_di_extra.doctrine_integration.entity_manager.file' => 'D:/XAMPP/htdocs/dev-ms.com/Symfony/app/cache/prod/jms_diextra/doctrine/EntityManager_5087b5d4400b6.php',
-            'jms_di_extra.doctrine_integration.entity_manager.class' => 'EntityManager5087b5d4400b6_546a8d27f194334ee012bfe64f629947b07e4919\\__CG__\\Doctrine\\ORM\\EntityManager',
+            'jms_di_extra.doctrine_integration.entity_manager.file' => 'D:/XAMPP/htdocs/dev-ms.com/Symfony/app/cache/prod/jms_diextra/doctrine/EntityManager_508936b80eebb.php',
+            'jms_di_extra.doctrine_integration.entity_manager.class' => 'EntityManager508936b80eebb_546a8d27f194334ee012bfe64f629947b07e4919\\__CG__\\Doctrine\\ORM\\EntityManager',
             'security.secured_services' => array(
             ),
             'security.access.method_interceptor.class' => 'JMS\\SecurityExtraBundle\\Security\\Authorization\\Interception\\MethodSecurityInterceptor',

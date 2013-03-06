@@ -159,7 +159,7 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->redirect($pathinfo.'/', '_start_index');
             }
 
-            return array (  '_controller' => 'MsCom\\WebsiteBundle\\Controller\\StartController::indexAction',  '_route' => '_start_index',);
+            return array (  '_controller' => 'Ms\\WebsiteBundle\\Controller\\StartController::indexAction',  '_route' => '_start_index',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
