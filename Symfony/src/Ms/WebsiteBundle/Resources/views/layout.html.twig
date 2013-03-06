@@ -8,9 +8,14 @@
         		{% block title %} Marc Schumann stellt sich vor ... {% endblock %}
         	{% endif %}
         </title>
+        <link rel="stylesheet" href="{{ asset('bundles/ms/css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/ms/css/bootstrap-responsive.min.css') }}" />
+        
+        <script type="text/javascript" src="{{ asset('bundles/ms/js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/ms/js/bootstrap.min.js') }}"></script>
     </head>
     <body>
-    	<div class="contentWrapper">
+    	<div class="container-fluid">
     		{% block content_header %}
     			
     		{% endblock %}
@@ -19,9 +24,9 @@
     			
     		{% endblock %}
 		        
-	        <div class="contentContainer">
+	        <div class="row-fluid">
 	        	{% block content %}
-	        		kann ich hier was reinschreiben?
+	        		Das ist der Defaulttext, wenn keine anderes Template geladen wird...
 	        	{% endblock %}
 	        </div>
 		</div>
